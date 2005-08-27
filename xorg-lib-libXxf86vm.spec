@@ -1,4 +1,4 @@
-# $Rev: 3324 $, $Date: 2005-08-15 12:17:57 $
+# $Rev: 3324 $, $Date: 2005-08-27 17:42:48 $
 #
 Summary:	Xxf86vm library
 Summary(pl):	Biblioteka Xxf86vm
@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-proto-xf86vidmodeproto-devel
 BuildRoot:	%{tmpdir}/libXxf86vm-%{version}-root-%(id -u -n)
