@@ -1,14 +1,14 @@
 Summary:	Xxf86vm library
 Summary(pl):	Biblioteka Xxf86vm
 Name:		xorg-lib-libXxf86vm
-Version:	0.99.0
-Release:	0.02
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXxf86vm-%{version}.tar.bz2
-# Source0-md5:	aa01959882cc527486b97ccb311584df
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXxf86vm-%{version}.tar.bz2
+# Source0-md5:	a1dce0a49b63235276f3a069e5d7ce8d
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
@@ -77,6 +77,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
+	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
@@ -87,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXxf86vm.so.*.*.*
 
 %files devel
@@ -95,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXxf86vm.la
 %attr(755,root,root) %{_libdir}/libXxf86vm.so
 %{_pkgconfigdir}/xxf86vm.pc
-%{_mandir}/man3/*.3*
+%{_mandir}/man3/*.3x*
 
 %files static
 %defattr(644,root,root,755)
