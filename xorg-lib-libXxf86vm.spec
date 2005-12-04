@@ -1,12 +1,12 @@
 Summary:	Xxf86vm library
 Summary(pl):	Biblioteka Xxf86vm
 Name:		xorg-lib-libXxf86vm
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXxf86vm-%{version}.tar.bz2
-# Source0-md5:	a1dce0a49b63235276f3a069e5d7ce8d
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXxf86vm-%{version}.tar.bz2
+# Source0-md5:	cfd6fb1994972c56b09d5e9e2a4cb333
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xf86vidmodeproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -77,7 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	libmandir=%{_mandir}/man3 \
 	pkgconfigdir=%{_pkgconfigdir}
 
 %clean
@@ -93,8 +92,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_libdir}/libXxf86vm.la
 %attr(755,root,root) %{_libdir}/libXxf86vm.so
+%{_libdir}/libXxf86vm.la
 %{_pkgconfigdir}/xxf86vm.pc
 %{_mandir}/man3/*.3x*
 
