@@ -24,8 +24,8 @@ Xxf86vm library.
 Biblioteka Xxf86vm.
 
 %package devel
-Summary:	Header files libXxf86vm development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXxf86vm
+Summary:	Header files for libXxf86vm library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXxf86vm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -35,7 +35,7 @@ Requires:	xorg-proto-xf86vidmodeproto-devel
 Xxf86vm library.
 
 This package contains the header files needed to develop programs that
-use these libXxf86vm.
+use libXxf86vm.
 
 %description devel -l pl
 Biblioteka Xxf86vm.
