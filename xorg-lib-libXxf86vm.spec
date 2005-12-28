@@ -5,8 +5,8 @@ Version:	1.0.0
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXxf86vm-%{version}.tar.bz2
-# Source0-md5:	c6018b25cf965cb70ed44c9e7036ccda
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXxf86vm-%{version}.tar.bz2
+# Source0-md5:	f552fe4e3b0b31f3bd7d567771398fce
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
