@@ -1,5 +1,5 @@
 Summary:	Xxf86vm library
-Summary(pl):	Biblioteka Xxf86vm
+Summary(pl.UTF-8):   Biblioteka Xxf86vm
 Name:		xorg-lib-libXxf86vm
 Version:	1.0.1
 Release:	3
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Xxf86vm library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka Xxf86vm.
 
 %package devel
 Summary:	Header files for libXxf86vm library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXxf86vm
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXxf86vm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -37,15 +37,15 @@ Xxf86vm library.
 This package contains the header files needed to develop programs that
 use libXxf86vm.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka Xxf86vm.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXxf86vm.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXxf86vm.
 
 %package static
 Summary:	Static libXxf86vm library
-Summary(pl):	Biblioteka statyczna libXxf86vm
+Summary(pl.UTF-8):   Biblioteka statyczna libXxf86vm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,10 +54,10 @@ Xxf86vm library.
 
 This package contains the static libXxf86vm library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka Xxf86vm.
 
-Pakiet zawiera statyczn± bibliotekê libXxf86vm.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXxf86vm.
 
 %prep
 %setup -q -n libXxf86vm-%{version}
