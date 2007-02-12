@@ -1,5 +1,5 @@
 Summary:	Xxf86vm library
-Summary(pl.UTF-8):   Biblioteka Xxf86vm
+Summary(pl.UTF-8):	Biblioteka Xxf86vm
 Name:		xorg-lib-libXxf86vm
 Version:	1.0.1
 Release:	3
@@ -25,7 +25,7 @@ Biblioteka Xxf86vm.
 
 %package devel
 Summary:	Header files for libXxf86vm library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXxf86vm
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXxf86vm
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXext-devel
@@ -45,7 +45,7 @@ używających biblioteki libXxf86vm.
 
 %package static
 Summary:	Static libXxf86vm library
-Summary(pl.UTF-8):   Biblioteka statyczna libXxf86vm
+Summary(pl.UTF-8):	Biblioteka statyczna libXxf86vm
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
