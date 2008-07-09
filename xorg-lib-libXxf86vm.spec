@@ -89,13 +89,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXxf86vm.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXxf86vm.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXxf86vm.so
 %{_libdir}/libXxf86vm.la
 %{_pkgconfigdir}/xxf86vm.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/XF86VM.3x*
+%{_mandir}/man3/XF86VidMode*.3x*
 
 %files static
 %defattr(644,root,root,755)
