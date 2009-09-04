@@ -1,19 +1,19 @@
 Summary:	Xxf86vm library
 Summary(pl.UTF-8):	Biblioteka Xxf86vm
 Name:		xorg-lib-libXxf86vm
-Version:	1.0.2
-Release:	2
+Version:	1.0.99.1
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86vm-%{version}.tar.bz2
-# Source0-md5:	304d37bd0a10d9b58aa9b64469ad73e5
+# Source0-md5:	18579bdfd75aed88575930288bee4da7
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-proto-xf86vidmodeproto-devel
+BuildRequires:	xorg-proto-xf86vidmodeproto-devel >= 2.2.99.1
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -95,6 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXxf86vm.so
 %{_libdir}/libXxf86vm.la
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xxf86vm.pc
 %{_mandir}/man3/XF86VM.3x*
 %{_mandir}/man3/XF86VidMode*.3x*
