@@ -1,12 +1,12 @@
 Summary:	Xxf86vm library
 Summary(pl.UTF-8):	Biblioteka Xxf86vm
 Name:		xorg-lib-libXxf86vm
-Version:	1.0.99.1
+Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXxf86vm-%{version}.tar.bz2
-# Source0-md5:	18579bdfd75aed88575930288bee4da7
+# Source0-md5:	b431ad7084e1055fef99a9115237edd8
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
