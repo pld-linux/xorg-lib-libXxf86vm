@@ -12,6 +12,7 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	sed >= 4.0
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xf86vidmodeproto-devel >= 2.2.99.1
 BuildRequires:	xorg-util-util-macros >= 1.8
@@ -62,6 +63,9 @@ Pakiet zawiera statyczną bibliotekę libXxf86vm.
 %prep
 %setup -q -n libXxf86vm-%{version}
 
+# support __libmansuffix__ with "x" suffix (per FHS 2.3)
+%{__sed} -i -e 's,\.so man__libmansuffix__/,.so man3/,' man/*.man
+
 %build
 %{__libtoolize}
 %{__aclocal}
@@ -77,9 +81,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-# there's no man3x in pld
-grep -rl man3x $RPM_BUILD_ROOT%{_mandir}/man3/* | xargs %{__sed} -i -e 's,man3x,man3,'
 
 %clean
 rm -rf $RPM_BUILD_ROOT
