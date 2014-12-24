@@ -100,8 +100,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXxf86vm.la
 %{_includedir}/X11/extensions/xf86vmode.h
 %{_pkgconfigdir}/xxf86vm.pc
-%{_mandir}/man3/XF86VM.3x*
-%{_mandir}/man3/XF86VidMode*.3x*
+%{_mandir}/man3/XF86VM.3*
+%{_mandir}/man3/XF86VidMode*.3*
 
 %files static
 %defattr(644,root,root,755)
