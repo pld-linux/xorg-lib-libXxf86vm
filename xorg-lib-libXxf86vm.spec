@@ -1,23 +1,26 @@
 Summary:	XFree86-VidMode X extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X XFree86-VidMode
 Name:		xorg-lib-libXxf86vm
-Version:	1.1.4
-Release:	2
+Version:	1.1.5
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXxf86vm-%{version}.tar.bz2
-# Source0-md5:	298b8fff82df17304dfdb5fe4066fe3a
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXxf86vm-%{version}.tar.xz
+# Source0-md5:	5b913dac587f2de17a02e17f9a44a75f
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xf86vidmodeproto-devel >= 2.2.99.1
+BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -97,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXxf86vm.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXxf86vm.so.1
 
