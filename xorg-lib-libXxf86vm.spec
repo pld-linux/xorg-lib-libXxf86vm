@@ -1,16 +1,16 @@
 Summary:	XFree86-VidMode X extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X XFree86-VidMode
 Name:		xorg-lib-libXxf86vm
-Version:	1.1.5
+Version:	1.1.6
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXxf86vm-%{version}.tar.xz
-# Source0-md5:	5b913dac587f2de17a02e17f9a44a75f
+# Source0-md5:	d3db4b6dc924dc151822f5f7e79ae873
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	sed >= 4.0
 BuildRequires:	tar >= 1:1.22
