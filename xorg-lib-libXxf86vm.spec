@@ -1,12 +1,12 @@
 Summary:	XFree86-VidMode X extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X XFree86-VidMode
 Name:		xorg-lib-libXxf86vm
-Version:	1.1.6
+Version:	1.1.7
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXxf86vm-%{version}.tar.xz
-# Source0-md5:	d3db4b6dc924dc151822f5f7e79ae873
+# Source0-md5:	bea9e3707fae6c3275769e771006fa0f
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -75,7 +75,7 @@ Pakiet zawiera statyczną bibliotekę libXxf86vm.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -101,12 +101,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README.md
-%attr(755,root,root) %{_libdir}/libXxf86vm.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libXxf86vm.so.1
+%{_libdir}/libXxf86vm.so.*.*.*
+%ghost %{_libdir}/libXxf86vm.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libXxf86vm.so
+%{_libdir}/libXxf86vm.so
 %{_includedir}/X11/extensions/xf86vmode.h
 %{_pkgconfigdir}/xxf86vm.pc
 %{_mandir}/man3/XF86VM.3*
